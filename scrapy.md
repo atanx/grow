@@ -1,3 +1,4 @@
+```sh
 sh
 $scrapy startproject tutorial
 $scrapy genspider 爬虫名 域名
@@ -16,17 +17,17 @@ class DmozItem(scrapy.Item):
 
 ### 3.编写爬虫
 > xpath解析
-```
+```python
 title = response.xpath(u'//div[@id="title"]/text()').extract_first()
 ```
 > 创建item
-```
+```python
 item={'title': title, 'link':link, 'desc':desc}
 yield item
 ```
 
 > 创建新请求
-```
+```python
 yield scrapy.Request(url, self.parse)
 ```
 
@@ -39,3 +40,5 @@ $scrapy crawl fast -s CLOSESPIDER_TIMEOUT=10
 #爬取参数
 $scrapy crawl fast -a category=nt
 ```
+
+## 使用Pipline
