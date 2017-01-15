@@ -42,3 +42,13 @@ $scrapy crawl fast -a category=nt
 ```
 
 ## 使用Pipline
+ 
+## settings
+CONCURRENT_REQUESTS = 100
+REACTOR_THREADPOOL_MAXSIZE = 20
+LOG_LEVEL = 'INFO'
+COOKIES_ENABLED = False
+RETRY_ENABLED = False
+DOWNLOAD_TIMEOUT = 15
+REDIRECT_ENABLED = False
+AJAXCRAWL_ENABLED = True
